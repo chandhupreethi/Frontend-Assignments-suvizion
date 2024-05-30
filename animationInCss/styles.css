@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 250px;
+  background-color: rgb(43, 54, 54);
+  height: 100vh;
+  width: 100vw;
+}
+.animated-image {
+  height: 200px;
+  width: 100px;
+
+  animation: normal;
+  animation: move 5s steps(5) 2s infinite reverse;
+}
+.image1 {
+  /*position: relative;*/
+
+  height: 200px;
+  width: 200px;
+}
+.image2 {
+  height: 300px;
+  width: 250px;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: scale3d(2, 2);
+  }
+}

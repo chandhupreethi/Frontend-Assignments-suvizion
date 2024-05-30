@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Types</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(0, 255, 13);
+      display: flex;
+      justify-content: center;
+      background-size: cover;
+      padding: 150px;
+      height: 50vh;
+    }
+  </style>
+
+  <body>
+    <div style="background-color: yellow; padding: 20px">
+      <h2>Input Form-Details</h2>
+      <form action="/HTML-Assignments-suvizion/Introduction/index.html">
+        <label for="firstname">FirstName: </label>
+        <input
+          style="border: 8px solid 10px; border-color: blueviolet; margin: 10px"
+          placeholder="firstname"
+          id="firstname"
+          type="text"
+        /><br />
+        <label for="lastname">LastName: </label>
+        <input
+          style="border: 8px solid 10px; border-color: blueviolet; margin: 10px"
+          placeholder="lastname"
+          type="text"
+          id="lastname"
+        /><br />
+        <label>Gender:</label><br />
+        <input type="radio" name="gender" />
+        <label>Male</label>
+        <input style="margin: 10px" type="radio" name="gender" />
+        <label>Female</label><br />
+
+        <label>Status: </label><br />
+        <div style="display: flex; align-items: row">
+          <label for="accept" style="margin: 5px">Accept:</label>
+          <input type="checkbox" name="status" id="accept" />
+          <label for="terms">Terms and Conditions:</label>
+          <input type="checkbox" name="status" id="terms" /><br />
+        </div>
+        <label for="file">Choose a file: </label>
+        <input type="file" id="file" accept="application/pdf" /><br />
+        <input style="margin-top: 10px" type="submit" />
+      </form>
+    </div>
+  </body>
+</html>

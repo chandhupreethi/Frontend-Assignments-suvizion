@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID</title>
+    <style>
+      .container {
+        display: grid;
+        display: inline-grid;
+        /*height:400px;*/
+        gap: 10px 10px;
+        grid-template-rows: repeat(4, 200px);
+        grid-template-columns: repeat(4, 200px);
+        justify-content: center;
+        align-content: space-between;
+      }
+      .box {
+        background-color: bisque;
+        /*width: 200px;*/
+      }
+      .head {
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+      .side-menu {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box head">1</div>
+      <div class="box side-menu">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+    </div>
+  </body>
+</html>

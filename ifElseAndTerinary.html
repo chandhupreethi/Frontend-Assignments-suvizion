@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If else and Terinay</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <p id="para">change the content</p>
+    <button onclick="changeText()">click me</button>
+
+    <script>
+      // current age
+
+      function currentAge(a) {
+        let year = 2024;
+        age = year - a;
+        console.log(age);
+      }
+      currentAge(1994);
+      currentAge(1962);
+      currentAge(1975);
+
+      // function for button
+
+      function changeText() {
+        const paragraph = (document.getElementById("para").innerHTML =
+          "hello javascript");
+      }
+      //  function for an addition
+
+      function add(a, b, c) {
+        console.log(a + b + c);
+      }
+      add(1, 2, 3);
+
+      //function for triangle and square
+
+      function squareTriangle(type, a, b) {
+        if (type === "square") {
+          console.log(2 * a * b);
+        } else if (type === "triangle") {
+          const area = 0.5 * a * b;
+          console.log("area of a triangle" + " " + area);
+        } else {
+          console.log("invalid type either square or triangle");
+        }
+      }
+      squareTriangle("square", 10, 10);
+      squareTriangle("triangle", 10, 20);
+      squareTriangle("cricle", 12, 10);
+      squareTriangle("SQUARE", 10, 10);
+
+      //positive or negative
+
+      /*  let x = 45;
+        if (x == 45) {
+          console.log("loose equal");
+        } else {
+          console.log("negative number");
+        }
+
+        if (x >= 50) {
+          console.log("highest number");
+        } else {
+          console.log("lowest number");
+        }
+
+        let y = -2;
+        if (y > 0) {
+          console.log("positive number");
+        } else {
+          console.log("negative number");
+        }
+
+        // even or odd
+
+        let z = 10;
+        if (z % 2 == 0) {
+          console.log("even number");
+        } else {
+          console.log("odd number");
+        }
+        //or
+
+        if (z % 2 == 1) {
+          console.log("even number");
+        } else {
+          console.log("odd number");
+        }
+
+        // terninary operator
+
+        let age = 18;
+        let validage = age >= 18 ? "eligible for vote" : "not eligible for vote";
+        console.log(validage);
+        //
+
+        let a = 10;
+        a > 10
+          ? a == 10
+            ? a < 10
+              ? console.log("greater than 10")
+              : console.log("equal to 10")
+            : console.log("less than 10")
+          : console.log("number is not valid");
+        //
+        let b = 4;
+        b > 10
+          ? b == 4
+            ? b < 4
+              ? console.log("greater than 10")
+              : console.log("equal to 4")
+            : console.log("less than 4")
+          : console.log("number is not valid");*/
+
+      function counter(n) {
+        let count = 0;
+        function increase() {
+          count += 1;
+          console.log(count);
+        }
+        return increase;
+      }
+      const myCounter = counter();
+      myCounter();
+      myCounter();
+
+      var createCounter = function (n) {
+        return function () {
+          return n++;
+          console.log(n);
+        };
+      };
+      createCounter(5);
+    </script>
+  </body>
+</html>

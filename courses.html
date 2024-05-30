@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      background-color: #ababab;
+      height: 100vh;
+      width: 100%;
+      padding: 35px 10px 35px 10px;
+    }
+    .container {
+      background-color: #0d0d0d;
+      border-radius: 10px;
+      /*height: 150vh;*/
+      padding-top: 30px;
+    }
+    .navbar-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .unordered-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .list-items {
+      font-size: 15px;
+      color: white;
+      font-weight: 600;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 20px;
+    }
+    .signup-button {
+      height: 35px;
+      width: 90px;
+      background-color: #e39e2c;
+      border-radius: 30px;
+      margin-left: 40px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: white;
+      padding: 5px 10px 5px 10px;
+      border-style: none;
+    }
+    .menu-image-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+    }
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      padding-top: 40px;
+    }
+    .header {
+      font-family: "Roboto";
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+      padding: 10px;
+      margin-left: 100px;
+    }
+    .paragraph {
+      font-family: "Roboto";
+      font-size: 13px;
+      font-weight: 100;
+      color: #cbfffd;
+      padding: 10px;
+      margin-left: 100px;
+    }
+    .image {
+      width: 25%;
+      margin-left: 430px;
+      margin-top: 60px;
+      position: relative;
+    }
+    .chart-image {
+      width: 10%;
+      transform: translateX(-420px);
+      margin-top: 320px;
+
+      z-index: 2;
+    }
+    .pie-chart {
+      width: 10%;
+      transform: translateY(-30px);
+      margin-right: 20px;
+      z-index: 1;
+    }
+    .course-card {
+      background-color: #9b2f5f;
+      height: 180px;
+      width: 230px;
+      border-radius: 10px;
+      box-shadow: 2px;
+      margin: 10px 5px 10px 5px;
+    }
+    .bg-color1 {
+      background-color: #cf6f20;
+    }
+    .bg-color2 {
+      background-color: #1f8ac5;
+    }
+    .bg-color3 {
+      background-color: #7e379d;
+    }
+    .icon {
+      font-size: 40px;
+      color: white;
+      margin-left: 20px;
+
+      margin-top: 20px;
+    }
+    .arrow-icon {
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="navbar-container">
+          <h2 class="fs-4 text-white text-center pt-3">E-Online</h2>
+          <div class="d-flex flex-row justify-content-between">
+            <ul class="unordered-list">
+              <li class="list-items">Home</li>
+              <li class="list-items">Category</li>
+              <li class="list-items">Courses</li>
+              <li class="list-items">Blog</li>
+            </ul>
+            <button class="signup-button">sign up</button>
+          </div>
+        </div>
+        <div class="menu-image-container">
+          <div class="menu-container">
+            <h1 class="header">
+              Investing in Knoweledge and <br />
+
+              <span style="color: #4f7da1">Our Future</span>
+            </h1>
+            <p class="paragraph">
+              Our e-learning programs has been developed to be a vechicle <br />
+              of delivering multimedia learning solutions for your business
+            </p>
+            <div class="d-flex flex-row justify-content-evenly mx-5 mt-3">
+              <button class="signup-button">contact</button>
+              <div class="d-flex flex-column">
+                <h5 class="text-white">50+</h5>
+                <p style="color: #ababab; font-size: 12px">carrer courses</p>
+              </div>
+              <div class="d-flex flex-column">
+                <h5 class="text-white">1M+</h5>
+                <p style="color: #ababab; font-size: 12px">our students</p>
+              </div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img
+              src="/Frontend-Assignments-suvizion/website/8-business-woman-girl-png-image.png"
+              alt="women"
+              class="image"
+            />
+            <img
+              src="/Frontend-Assignments-suvizion/website/depositphotos_8555030-stock-illustration-growth-progress-bar-chart.jpg"
+              alt="pie"
+              class="pie-chart"
+            />
+            <img
+              src="/Frontend-Assignments-suvizion/website/FTF_Skills-and-Levels-chart.jpeg"
+              alt="chart"
+              class="chart-image"
+            />
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-start mx-5">
+          <h4 class="text-white mx-5">
+            Browse Top Essential <br />
+            Carrer course
+          </h4>
+          <div class="d-flex flex-row justify-content-evenly">
+            <div class="d-flex flex-row">
+              <div class="course-card">
+                <i class="fa-solid fa-eraser icon"></i>
+                <h4 class="text-white mt-5 mx-2">UX/UI Design</h4>
+                <hr style="color: white; padding: 0px 10px 0px 10px" />
+              </div>
+              <div class="course-card bg-color1">
+                <i class="fa-solid fa-code icon"></i>
+                <h4 class="text-white mt-5 mx-2">Web Development</h4>
+                <hr style="color: white; padding: 0px 10px 0px 10px" />
+              </div>
+              <div class="course-card bg-color2">
+                <i class="fa-solid fa-bullhorn icon"></i>
+                <h4 class="text-white mt-5 mx-2">Digital Marketing</h4>
+                <hr style="color: white; padding: 0px 10px 0px 10px" />
+              </div>
+              <div class="course-card bg-color3">
+                <i class="fa-solid fa-laptop-file icon"></i>
+                <h4 class="text-white mt-5 mx-2">Partical Learning</h4>
+                <hr style="color: white; padding: 0px 10px 0px 10px" />
+              </div>
+            </div>
+            <div class="d-flex flex-column justify-content-start mt-5">
+              <button class="signup-button">
+                <i class="fa-solid fa-arrow-right arrow-icon"></i>
+              </button>
+              <p class="text-white mx-5 pt-2">Browse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

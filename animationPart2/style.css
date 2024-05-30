@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  background-color: bisque;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+}
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: blueviolet;
+  padding: 20px 20px 10px 20px;
+  animation: move 3s ease-in 3s 4 reverse;
+}
+@keyframes move {
+  0% {
+    height: 200px;
+    width: 200px;
+  }
+  50% {
+    height: 100px;
+    width: 100px;
+  }
+  100% {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.box:hover {
+  background-color: brown;
+}
+
+.spiner {
+  height: 100px;
+  width: 100px;
+  margin-top: 100px;
+  border-radius: 50px;
+  background-color: aqua;
+  border-width: 20px;
+  box-shadow: 10px 20px 10px 10px;
+  animation: forwards;
+  animation: spin 5s ease-in infinite 3s alternate-reverse;
+}
+
+@keyframes spin {
+  0% {
+    /*transform: translateX(700px);*/
+    background-color: rgb(108, 108, 183);
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: translateX(700px);
+  }
+  100% {
+    background-color: brown;
+  }
+}
+.skew {
+  position: fixed;
+  color: rgb(95, 5, 84);
+  font-size: 45px;
+  height: 100px;
+  width: 500px;
+  margin-top: 100px;
+  font-style: italic;
+  animation: forwards;
+  animation: skew 2s ease-in 2s 5 alternate-reverse;
+}
+@keyframes skew {
+  0% {
+    background-color: black;
+  }
+  100% {
+    transform: skew(250deg);
+  }
+}

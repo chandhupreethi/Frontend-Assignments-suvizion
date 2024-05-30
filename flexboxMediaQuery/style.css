@@ -1,0 +1,145 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.main-container {
+  background-color: antiquewhite;
+  height: 120vh;
+  width: 120vw;
+  /*position: absolute;*/
+}
+.header {
+  background-color: rgb(224, 48, 48);
+  height: 15vh;
+  width: 120vw;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(11, 11, 63);
+  font-weight: 800;
+  padding-top: 50px;
+}
+
+.menu-image-paragraph-container {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+}
+
+.menu {
+  height: 80vh;
+  width: 15%;
+  background-color: rgb(83, 161, 161);
+  margin-top: 10px;
+}
+
+.image-paragraph-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 10px 20px 30px;
+}
+.image {
+  height: 180px;
+  width: 200px;
+  margin: 10px;
+}
+.images {
+  height: 280px;
+  width: 50%;
+  background-color: aliceblue;
+  border-width: 2px solid rgb(140, 79, 79);
+  box-shadow: 1px 5px 2px 1px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 6px;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(218, 84, 173);
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer {
+  background-color: rgb(58, 67, 55);
+  height: 20%;
+  text-align: center;
+  padding: 30px;
+  color: rgb(49, 27, 216);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 500px) {
+  .main-container {
+    background-color: rgb(180, 201, 201);
+    height: 500px;
+    width: 500px;
+    /*position: fixed;*/
+  }
+  .header {
+    background-color: rgb(224, 48, 48);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(11, 11, 63);
+    font-weight: 200;
+    padding-top: 50px;
+  }
+
+  .menu-image-paragraph-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+  }
+
+  .menu {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(143, 161, 83);
+    margin-top: 10px;
+    font-size: 10px;
+    color: antiquewhite;
+  }
+  .images {
+    height: 50px;
+    width: 10%;
+    background-color: aliceblue;
+    border-width: 2px solid rgb(140, 79, 79);
+    box-shadow: 1px 5px 2px 1px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 6px;
+  }
+
+  .image {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+  }
+  p {
+    font-size: 6px;
+    font-weight: 100;
+    color: rgb(218, 84, 173);
+    text-align: center;
+  }
+
+  .footer {
+    background-color: rgb(58, 67, 55);
+    height: 10%;
+    text-align: center;
+    padding: 30px;
+    color: rgb(49, 27, 216);
+    font-size: 12px;
+    font-weight: 200;
+  }
+}

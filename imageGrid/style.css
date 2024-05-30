@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.option {
+  border: 1px solid rgb(225, 191, 191);
+  background-color: transparent;
+  color: rgb(170, 128, 86);
+  margin: 10px 40px 10px 20px;
+  border-radius: 2px;
+}
+.input {
+  margin: 10px 10px 10px 10px;
+  width: 500px;
+  padding: 10px;
+  border-style: none;
+  border-radius: 4px;
+}
+.search-icon {
+  position: relative;
+  top: 20px;
+  right: 40px;
+}
+.button {
+  background-color: blue;
+  margin: 10px 20px 10px 20px;
+  padding: 10px;
+  border-radius: 4px;
+  border-width: none;
+  font-style: oblique;
+  font-stretch: expanded;
+  color: white;
+  font-weight: bold;
+}
+.button:active {
+  background-color: brown;
+}
+.btn-i {
+  height: 50px;
+  width: 100px;
+  border: 1px solid rgb(148, 102, 102);
+  border-radius: 2px;
+  margin: 20px 20px 40px 10px;
+  padding: 20px;
+}

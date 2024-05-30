@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REACT QUIZ</title>
+  </head>
+  <body>
+    <style>
+      h1 {
+        text-align: center;
+        color: bisque;
+      }
+      li {
+        list-style-type: none;
+      }
+      .container {
+        width: 80%;
+        border: 2px solid rosybrown;
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 10px;
+      }
+      h3 {
+        color: blanchedalmond;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+      }
+      .options {
+        font-family: "Roboto";
+      }
+    </style>
+    <div
+      style="
+        background-color: rgb(112, 54, 98);
+        height: 180vh;
+        background-size: cover;
+      "
+    >
+      <h1 style="padding: 20px">REACT QUIZ</h1>
+      <div
+        style="
+          display: flex;
+          border: 2px solid rgb(193, 173, 202);
+          padding: 10px;
+          border-radius: 6px;
+          width: fit-content;
+          margin-left: 50px;
+          text-align: center;
+        "
+      >
+        <label style="margin-right: 10px; color: bisque" for="name"
+          >Name:
+        </label>
+        <input
+          style="margin-right: 10px"
+          type="text"
+          id="name"
+          placeholder="preethi"
+        />
+        <label style="margin-right: 10px; color: bisque" type="email"
+          >Email:</label
+        >
+        <input type="email" id="email" placeholder="preethi@gmail.com" />
+      </div>
+      <div
+        style="
+          background-color: rgb(26, 120, 26);
+          height: 80px;
+          width: 80px;
+          margin-left: 250px;
+          border-radius: 30px;
+          display: none;
+        "
+      >
+        <h2 style="text-align: center; padding: 25px">5/5</h2>
+      </div>
+      <div id="ques1" class="container">
+        <h3>1.What does JSX stand for in React</h3>
+        <div class="options">
+          <ul>
+            <li style="color: rgb(9, 230, 60)">
+              1.
+              <input type="radio" name="ques1" checked />JavaScript XML
+            </li>
+            <li>2. <input type="radio" name="ques1" />JavaScript Extension</li>
+            <li>3. <input type="radio" name="ques1" />JavaScript Execution</li>
+            <li>4. <input type="radio" name="ques1" />JavaScript Syntax</li>
+          </ul>
+        </div>
+      </div>
+      <div id="ques2" class="container">
+        <h3>
+          2. In React, what function is used to change the state of a component?
+        </h3>
+        <div class="options">
+          <ul>
+            <li style="color: rgb(9, 230, 60)">
+              1.
+              <input type="radio" name="ques2" checked />setState()
+            </li>
+            <li>2. <input type="radio" name="ques2" />changeState()</li>
+            <li>3. <input type="radio" name="ques2" />updateState()</li>
+            <li>4. <input type="radio" name="ques2" />modifyState()</li>
+          </ul>
+        </div>
+      </div>
+      <div id="ques3" class="container">
+        <h3>3. What does JSX stand for in React</h3>
+        <div class="options">
+          <select>
+            <option value="To fetch data from an API">
+              1. To fetch data from an API
+            </option>
+            <option
+              value="To handle component side-effects"
+              style="color: rgb(9, 230, 60)"
+              selected
+            >
+              2. To handle component side-effects
+            </option>
+            <option value="To create a new component">
+              3. To create a new component
+            </option>
+            <option value="To update the component's state">
+              4. To update the component's state
+            </option>
+          </select>
+        </div>
+      </div>
+      <div id="ques4" class="container">
+        <h3>4. What does the virtual DOM do in React?</h3>
+        <div class="options">
+          <ul>
+            <li>
+              1. <input type="checkbox" />It directly manipulattes the browser's
+              DOM for fater rendering.
+            </li>
+            <li>
+              2. <input type="checkbox" />It provides a way to style components
+              using CSS-in-JS.
+            </li>
+            <li style="color: rgb(9, 230, 60)">
+              3.
+              <input type="checkbox" checked />It helps in efficiently updating
+              the actual DOM by minimizing re-renders.
+            </li>
+            <li>
+              4. <input type="checkbox" />It manages the stae of components
+              withn a Redux store
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <h3>5. React.js</h3>
+        <textarea row="150" cols="50">
+React.js is a javaScript library for building user interfaces,know for its component-based architecture and efficient rendering system, enabling developers to create dynamic web applications with ease.  </textarea
+        >
+      </div>
+      <footer style="display: flex; justify-content: center">
+        <button
+          style="
+            background-color: rgb(33, 114, 114);
+            border-radius: 4px;
+            border: 0px solid;
+            height: 40px;
+            width: 200px;
+            color: blanchedalmond;
+            margin-top: 20px;
+          "
+        >
+          Submit
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>

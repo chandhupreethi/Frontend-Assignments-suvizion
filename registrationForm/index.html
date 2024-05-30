@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegistrationForm</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .checkbox-container {
+        display: flex;
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+      .label-width {
+        width: 200%;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-container">
+        <img
+          src="/HTML-Assignments-suvizion/registrationForm/sign-up-virtual-screen-hand-showing-text-67884177.webp"
+          class="image"
+        />
+        <form class="form">
+          <h2
+            style="
+              font-size: 30px;
+              font-weight: bold;
+              font-style: italic;
+              text-align: center;
+              padding: 20px;
+              color: antiquewhite;
+              text-shadow: 1px 2px;
+            "
+          >
+            Register your Account
+          </h2>
+          <div class="label-container">
+            <label for="firstname" class="label">Firstname:</label>
+            <input
+              type="text"
+              placeholder="Firstname"
+              id="firstname"
+              class="input"
+            />
+          </div>
+          <div class="label-container">
+            <label for="Lastname" class="label">Lastname:</label>
+            <input
+              type="text"
+              placeholder="Lastname"
+              id="lastname"
+              class="input"
+            />
+          </div>
+          <div class="label-container">
+            <label for="email" class="label">Email:</label>
+            <input
+              type="email"
+              placeholder="preethi1213@gmail.com"
+              id="email"
+              class="input"
+            />
+          </div>
+          <div class="label-container">
+            <label for="number" class="label">Contact:</label>
+            <input type="number" id="number" class="input" />
+          </div>
+          <div class="label-container">
+            <label for="day" class="label">Date of Birth:</label>
+            <input
+              type="datetime-local"
+              placeholder="dd-mm-yyy--:--"
+              id="day"
+              class="input"
+            />
+          </div>
+
+          <div class="label-container">
+            <label class="label" style="width: 130px">Gender:</label>
+            <select class="input" style="margin-right: 80px">
+              <option>Male</option>
+              <option selected>Female</option>
+            </select>
+          </div>
+          <div class="label-container">
+            <label for="address" class="label">Address:</label>
+            <textarea
+              rows="5"
+              cols="20"
+              placeholder="Address"
+              type="text"
+              class="input"
+            ></textarea>
+          </div>
+          <div class="label-container">
+            <label for="city" class="label">State:</label>
+            <input type="text" placeholder="State" class="input" />
+          </div>
+          <div class="label-container">
+            <label for="State" class="label">Country:</label>
+            <input type="text" placeholder="country" id="state" class="input" />
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="input" />
+            <label for="checkbox" class="label label-width"
+              >Accept the terms and conditions</label
+            >
+          </div>
+          <button type="button" class="button">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

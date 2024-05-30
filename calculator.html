@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 100px 0px 0px 500px;
+        height: 60vh;
+        width: 23vw;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px 10px;
+        padding: 20px;
+      }
+      .container {
+        height: 80px;
+        width: 220px;
+        background-color: #111111;
+        border-radius: 10px;
+        margin-left: 55px;
+        color: white;
+        font-size: 28px;
+        text-align: right;
+        padding-top: 15px;
+      }
+      .calci-num-symbol-container {
+        height: 500px;
+        width: 300px;
+        background-color: #f58d6d;
+        margin-left: 20px;
+        margin-top: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .calci {
+        display: flex;
+        flex-direction: row;
+      }
+      .calci-num-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+      .calci-button {
+        height: 30px;
+        width: 50px;
+        background-color: #111111;
+        color: white;
+        margin: 10px 10px 0px 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .calci-symbol-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1px;
+      }
+
+      .calci-button1 {
+        height: 40px;
+        width: 30px;
+        background-color: #111111;
+        color: white;
+        margin: 10px 10px 5px 0px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .size {
+        font-size: 10px;
+      }
+      .button-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      .button-reset {
+        height: 30px;
+        width: 120px;
+        background-color: transparent;
+        border: 2px solid white;
+
+        padding: 5px 20px 5px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: white;
+      }
+      .button-equal {
+        height: 30px;
+        width: 120px;
+        background-color: #7a996d;
+        border-style: none;
+        padding: 5px 20px 5px 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div type="text" class="container" id="display"></div>
+      <div class="calci-num-symbol-container">
+        <div class="calci">
+          <div class="calci-num-container" id="calciNumber">
+            <!--<button class="calci-button">1</button>
+            <button class="calci-button">2</button>
+            <button class="calci-button">3</button>
+            <button class="calci-button">4</button>
+            <button class="calci-button">5</button>
+            <button class="calci-button">6</button>
+            <button class="calci-button">7</button>
+            <button class="calci-button">8</button>
+            <button class="calci-button">9</button>
+            <button class="calci-button">0</button>-->
+          </div>
+          <div class="calci-symbol-container" id="calciOperator">
+            <!--<button class="calci-button1 size">DEL</button>
+            <button class="calci-button1">X</button>
+            <button class="calci-button1">-</button>
+            <button class="calci-button1">+</button>
+            <button class="calci-button1">/</button>-->
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="button-reset" id="reset">Reset</button>
+          <button class="button-equal" id="equalTo">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let calciNum = document.getElementById("calciNumber");
+
+      let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+      let operators = ["X", "/", "+", "-"];
+      let equation = "";
+
+      numbers.map((i) => {
+        let button = document.createElement("button");
+        button.innerHTML = i;
+        button.classList.add("calci-button");
+        button.addEventListener("click", () => numberClick(i));
+        calciNum.appendChild(button);
+      });
+      function numberClick(i) {
+        equation += i;
+        document.getElementById("display").innerHTML = equation;
+      }
+
+      let opButton = document.getElementById("calciOperator");
+      operators.map((o) => {
+        let buttonOp = document.createElement("button");
+        buttonOp.classList.add("calci-button1");
+        buttonOp.innerHTML = o;
+        buttonOp.addEventListener("click", () => numberClick(o));
+        opButton.appendChild(buttonOp);
+      });
+
+      function calci() {
+        operators = operators.replace("X", "*");
+        let result = eval(equation);
+        document.getElementById("display").innerHTML = equation;
+        if (result === undefined) {
+          equation = "";
+          document.getElementById("display").innerHTML = equation;
+        } else {
+          equation = result;
+          document.getElementById("display").innerHTML = equation;
+        }
+      }
+
+      let equalBtn = document.getElementById("equalTo");
+      equalBtn.addEventListener("click", () => calci());
+
+      let resetbtn = document.getElementById("reset");
+      resetbtn.addEventListener("click", () => reset());
+
+      function reset() {
+        equation = "";
+        document.getElementById("display").innerHTML = equation;
+      }
+
+      let deleteBtn = document.createElement("button");
+      deleteBtn.innerHTML = "DEL";
+      deleteBtn.classList.add("calci-button1");
+      deleteBtn.addEventListener("click", () => deleteBt());
+      opButton.appendChild(deleteBtn);
+      function deleteBt() {
+        equation = equation.slice(0, -1);
+        document.getElementById("display").innerHTML = equation;
+      }
+      /*let display = document.getElementById("display");
+      let button = document.getElementsByClassName("calci-button");
+      let buttonOperator = document.getElementsByClassName("calci-button1");
+      let resetbtn = document.getElementById("reset");
+      let equalBtn = document.getElementById("equalTo");
+      /*function numberButton(event) {
+        display.value += event.target.textContent;
+      }
+
+      for (let buttons of button) {
+        buttons.addEventListener("click", (event) => {
+          display.value += event.target.textContent;
+        });
+      }
+      resetbtn.addEventListener("click", () => {
+        display.value = " ";
+      });
+
+      for (let operator of buttonOperator) {
+        operator.addEventListener("click", (event) => {
+          let symbol = event.target.textContent;
+          if (symbol === "+") {
+            display.value += " + ";
+          } else if (symbol === "-") {
+            display.value += " - ";
+          } else if (symbol === "X") {
+            display.value += " * ";
+          } else if (symbol === "/") {
+            display.value += " / ";
+          } else if (symbol === "DEL") {
+            display.value = display.value.slice(0, -1);
+          }
+        });
+      }
+
+      //string slicing method
+
+      /*let fruits = "apple ,banana, kiwi";
+      let part = fruits.slice(-6, -3);
+      console.log(part);*/
+    </script>
+  </body>
+</html>
